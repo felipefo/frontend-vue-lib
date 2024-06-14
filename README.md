@@ -1,5 +1,20 @@
 # input-text
 
+
+## Diagramas 
+
+
+### Camada de acesso a api
+![Camada de acesso a api](Repository_diagram.png)
+
+
+### Camada de implementacao de casos de uso 
+![Camada de implementacao de casos de uso](Usecase_diagram.png)
+
+### Camada de reuso de elementos de interface 
+![Camada de reuso de elementos de interface](FieldDomain_diagram.png)
+
+
 ## Project setup
 ```
 npm install
