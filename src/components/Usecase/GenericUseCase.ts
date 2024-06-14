@@ -1,13 +1,14 @@
 import GenericRepositoryFactory from "../Repository/RepositoryFactory";
 import IRepositoryBase from "../Repository/IRepositoryBase";
+import IGenericUseCase from "./IGenericUseCase";
 
-class GenericUseCase {
+class GenericUseCase implements IGenericUseCase{
   private repository: IRepositoryBase; // Interface do repositório genérico
   private entity: string; 
   private token: string;
 
   constructor(entity: string) {
-    this.repository = GenericRepositoryFactory.createRepository(entity);
+    this.repository = GenericRepositoryFactory.getInstance().createRepository(entity);
     this.entity = entity;
     this.token = localStorage.getItem('authToken') || "";
   }

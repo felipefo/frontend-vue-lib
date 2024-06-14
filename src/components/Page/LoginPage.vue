@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import DynamicForm from '../Form/DynamicForm.vue';
-import login from '../Usecase/LoginUseCase';
+import LoginUseCase from '../Usecase/LoginUseCase';
 import FactoryDomain from '../FieldDomain/Model/FactoryDomain';
 
 
@@ -32,7 +32,7 @@ export default defineComponent({
   },
   methods: {
     handleFormSubmitted(formData: any) {
-    
+      const login = new LoginUseCase();
     //action.execute(form)
       login(formData).then(token => {
         alert('Logged in successfully, token:'+ token);
